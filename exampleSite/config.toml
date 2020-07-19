@@ -1,38 +1,3 @@
-Skip to content
-Why GitHub? 
-Team
-Enterprise
-Explore 
-Marketplace
-Pricing 
-Search
-
-Sign in
-Sign up
-themefisher
-/
-meghna-hugo
-9165560
-Code
-Issues
-1
-Pull requests
-Actions
-Projects
-Security
-Insights
-Join GitHub today
-GitHub is home to over 50 million developers working together to host and review code, manage projects, and build software together.
-
-meghna-hugo/exampleSite/config.toml
-@divinerites
-divinerites Fix a small typo (obviously from automatic translation :-)
-Latest commit 4ef9dab 23 days ago
- History
- 6 contributors
-@developer-evan@hawkeye116477@Miss-Jones@TamaMcGlinn@divinerites@datawookie
-151 lines (129 sloc)  3.68 KB
-  
 ################################# Default configuration ###################
 baseURL = "https://examplesite.com"
 title = "Meghna"
@@ -184,15 +149,3 @@ contentDir = "content/french"
 weight = 2
 home = "Accueil"
 copyright = "copyright &copy; 2020 [gethugothemes](https://gethugothemes.com) tous droits réservés"
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
