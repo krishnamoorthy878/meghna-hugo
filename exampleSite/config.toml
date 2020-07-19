@@ -1,140 +1,198 @@
-baseURL = "http://demo.themefisher.com"
+Skip to content
+Why GitHub? 
+Team
+Enterprise
+Explore 
+Marketplace
+Pricing 
+Search
+
+Sign in
+Sign up
+themefisher
+/
+meghna-hugo
+9165560
+Code
+Issues
+1
+Pull requests
+Actions
+Projects
+Security
+Insights
+Join GitHub today
+GitHub is home to over 50 million developers working together to host and review code, manage projects, and build software together.
+
+meghna-hugo/exampleSite/config.toml
+@divinerites
+divinerites Fix a small typo (obviously from automatic translation :-)
+Latest commit 4ef9dab 23 days ago
+ History
+ 6 contributors
+@developer-evan@hawkeye116477@Miss-Jones@TamaMcGlinn@divinerites@datawookie
+151 lines (129 sloc)  3.68 KB
+  
+################################# Default configuration ###################
+baseURL = "https://examplesite.com"
+title = "Meghna"
+theme = "meghna-hugo"
+# post pagination
+paginate = "6"
+# post excerpt
+summaryLength = "15"
+# disqus short name
+disqusShortname = "" # get your shortname form here : https://disqus.com
+# disable language
 disableLanguages = []
-disqusShortname = ""
-paginate = "4"
-summaryLength = "30"
-theme = "airspace-hugo"
-title = "Airspace | Creative Agency Hugo Template"
-[Languages.en]
-contentDir = "content/english"
-copyright = "Copyright &copy; 2020 [Themefisher](https://themefisher.com) All Rights Reserved"
-home = "Home"
-languageCode = "en-us"
-languageName = "En"
-weight = 1
-[Languages.fr]
-contentDir = "content/french"
-copyright = "Copyright &copy; 2020 [Themefisher](https://themefisher.com) All Rights Reserved"
-home = "Accueil"
-languageCode = "fr-fr"
-languageName = "Fr"
-weight = 2
-[[menu.footer]]
-URL = "about"
-name = "About"
-weight = 1
-[[menu.footer]]
-URL = "project"
-name = "Project"
-weight = 2
-[[menu.footer]]
-URL = "service"
-name = "Service"
-weight = 3
-[[menu.footer]]
-URL = "pricing"
-name = "Pricing"
-weight = 4
-[[menu.footer]]
-URL = "faq"
-name = "FAQ"
-weight = 5
-[[menu.footer]]
-URL = "contact"
-name = "Contact"
-weight = 6
-[[menu.main]]
-URL = "about"
-name = "About"
-weight = 1
-[[menu.main]]
-URL = "project"
-name = "Project"
-weight = 2
-[[menu.main]]
-URL = "service"
-name = "Service"
-weight = 3
-[[menu.main]]
-URL = "blog"
-name = "Blog"
-weight = 4
-[[menu.main]]
-hasChildren = true
-name = "Pages"
-weight = 5
-[[menu.main]]
-URL = "faq"
-name = "FAQ"
-parent = "Pages"
-[[menu.main]]
-URL = "pricing"
-name = "Pricing"
-parent = "Pages"
-[[menu.main]]
-URL = "contact"
-name = "Contact"
-weight = 6
-[params]
-author = "Themefisher"
-contact_form_action = "#"
-description = "This is meta description"
-email = "demo@email.com"
-google_analitycs_id = ""
-location = "North Main Street,Brooklyn Australia"
-logo = "images/logo.png"
-mobile = "0124857985320"
-multi_author = false
-[params.gmap]
-enable = true
-gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
-map_latitude = "51.5223477"
-map_longitude = "-0.1622023"
-map_marker = "images/marker.png"
-[params.nav_button]
-enable = true
-label = "Get A Quote"
-link = "contact"
+
+############################# Plugins ##########################
+# css plugins
 [[params.plugins.css]]
 link = "plugins/bootstrap/bootstrap.min.css"
 [[params.plugins.css]]
-link = "plugins/Ionicons/css/ionicons.min.css"
+link = "plugins/themify-icons/themify-icons.css"
 [[params.plugins.css]]
 link = "plugins/magnific-popup/magnific-popup.css"
 [[params.plugins.css]]
 link = "plugins/slick/slick.css"
+[[params.plugins.css]]
+link = "https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700&display=swap"
+
+# js plugins
 [[params.plugins.js]]
-link = "plugins/jQuery/jquery.min.js"
+link = "plugins/jquery/jquery.min.js"
 [[params.plugins.js]]
 link = "plugins/bootstrap/bootstrap.min.js"
 [[params.plugins.js]]
 link = "plugins/slick/slick.min.js"
 [[params.plugins.js]]
-link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
-[[params.plugins.js]]
 link = "plugins/shuffle/shuffle.min.js"
 [[params.plugins.js]]
-link = "plugins/google-map/gmap.js"
+link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
+[[params.plugins.js]]
+link = "plugins/lazy-load/lozad.min.js"
+[[params.plugins.js]]
+link = "plugins/google-map/map.js"
+
+############################# Navigation ##################################
+[[menu.main]]
+name = "about"
+URL = "about"
+weight = 1
+
+[[menu.main]]
+name = "services"
+URL = "services"
+weight = 2
+
+[[menu.main]]
+name = "portfolio"
+URL = "portfolio"
+weight = 3
+
+[[menu.main]]
+name = "team"
+URL = "team"
+weight = 4
+
+[[menu.main]]
+name = "pricing"
+URL = "pricing"
+weight = 5
+
+[[menu.main]]
+name = "blog"
+URL = "blog"
+weight = 6
+
+[[menu.main]]
+name = "contact"
+URL = "contact"
+weight = 7
+
+#### external / static link ####
+[[menu.static]]
+name = "themefisher"
+URL = "https://themefisher.com/"
+weight = 8
+
+############################# Default Parameters ##########################
+[params]
+logo = "images/logo.png"
+# Meta data
+description = "Responsive Multipurpose Parallax HTML5 Template"
+author = "Themefisher"
+# Google Analytics
+google_analytics_id = "" # Your ID
+# post share
+post_share = true
+
+# preloader
 [params.preloader]
 enable = true
-preloader = ""
-[params.widgets]
-sidebar = ["recent_posts", "taxonomy_category", "taxonomy_tags"]
+preloader = "images/logo.png"
+
+# google map
+[params.map]
+enable = true
+gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
+map_latitude = "51.5223477"
+map_longitude = "-0.1622023"
+map_marker = "images/marker.png"
+
+############################# social icons ##########################
 [[params.social]]
-icon = "ion-social-googleplus-outline"
+icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
 link = "#"
+
 [[params.social]]
-icon = "ion-social-linkedin-outline"
+icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
 link = "#"
+
 [[params.social]]
-icon = "ion-social-pinterest-outline"
+icon = "ti-youtube" # themify icon pack : https://themify.me/themify-icons
 link = "#"
+
 [[params.social]]
-icon = "ion-social-dribbble-outline"
+icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
 link = "#"
+
 [[params.social]]
-icon = "ion-social-twitter-outline"
+icon = "ti-dribbble" # themify icon pack : https://themify.me/themify-icons
 link = "#"
+
 [[params.social]]
-icon = "ion-social-facebook-outline"
+icon = "ti-pinterest" # themify icon pack : https://themify.me/themify-icons
 link = "#"
+
+
+################################ English Language ########################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+home = "Home"
+copyright = "copyright &copy; 2020 [gethugothemes](https://gethugothemes.com) all right reserved"
+
+################################ France Language ########################
+[Languages.fr]
+languageName = "Fr"
+languageCode = "fr-fr"
+contentDir = "content/french"
+weight = 2
+home = "Accueil"
+copyright = "copyright &copy; 2020 [gethugothemes](https://gethugothemes.com) tous droits réservés"
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
